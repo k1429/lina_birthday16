@@ -3,144 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 22nd Birthday, Rania! 🎉🐻</title>
-    <!-- Tailwind CSS -->
+    <title>Happy 20th Birthday, Batul! 🎉🐻</title>
+    <!-- مكتبة التصميم -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            /* استعادة الخلفية الوردية الكلاسيكية */
-            background-image: url('https://placehold.co/1920x1080/F0F8FF/FFC0CB?text=Cute+Birthday+Background'); 
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed; 
-            background-repeat: no-repeat; 
-            background-color: #fcf3f6; 
+            background: linear-gradient(135deg, #fce7f3 0%, #fae8ff 100%);
+            min-height: 100vh;
         }
-
-        @keyframes bounce-slow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .animate-bounce-slow {
-            animation: bounce-slow 3s infinite ease-in-out;
-        }
-
         .hidden { display: none; }
-
-        #password-screen.hidden {
-            opacity: 0;
-            transform: scale(0.9);
-            pointer-events: none;
-        }
-
-        #birthday-content:not(.hidden) {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(-5px); }
-            40% { transform: translateX(5px); }
-            60% { transform: translateX(-5px); }
-            80% { transform: translateX(5px); }
-            100% { transform: translateX(0); }
-        }
-        .animate-shake { animation: shake 0.5s ease-in-out; }
-
-        .teddy-bear-icon {
-            font-size: 2.5rem;
-            margin: 0 10px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
-        }
     </style>
 </head>
-<body class="font-inter min-h-screen flex items-center justify-center p-4">
+<body class="min-h-screen flex items-center justify-center p-4">
 
-    <!-- شاشة كلمة السر -->
-    <div id="password-screen" class="bg-white p-10 rounded-3xl shadow-xl max-w-md w-full text-center transition-all duration-500 ease-in-out transform scale-100 opacity-100 border-4 border-pink-200">
-        <h2 class="text-4xl font-bold text-purple-600 mb-6 drop-shadow-sm">Unlock Your Birthday Surprise! ✨</h2>
-        <p class="text-gray-700 text-lg mb-8">Enter the secret password to reveal your special message for Rania.</p>
-        <input type="password" id="password-input" placeholder="Enter password" class="w-full p-4 border-2 border-purple-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-pink-300 text-center text-xl text-gray-800 placeholder-gray-400">
-        <button onclick="checkPassword()" class="mt-8 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-4 px-10 rounded-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+    <!-- شاشة كلمة المرور -->
+    <div id="password-screen" class="bg-white p-10 rounded-3xl shadow-xl max-w-md w-full text-center border-4 border-pink-200">
+        <h2 class="text-4xl font-bold text-purple-600 mb-6">Unlock Your Birthday Surprise! ✨</h2>
+        <p class="text-gray-700 text-lg mb-8">Enter the secret password to reveal your special message for Batul.</p>
+        <input type="password" id="password-input" placeholder="Enter password" class="w-full p-4 border-2 border-purple-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-pink-300 text-center text-xl text-gray-800">
+        <button onclick="checkPassword()" class="mt-8 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-4 px-10 rounded-xl shadow-lg hover:opacity-90 transition">
             Unlock the Magic! 💖
         </button>
-        <p id="error-message" class="text-red-500 font-semibold mt-4 hidden">Oops! Incorrect password. Try again! 🧸</p>
+        <p id="error-message" class="text-red-500 font-semibold mt-4 hidden">Oops! Incorrect password. Please try again!</p>
     </div>
 
-    <!-- المحتوى الداخلي الأصلي -->
-    <div id="birthday-content" class="hidden bg-white p-10 rounded-3xl shadow-xl max-w-3xl w-full text-center transition-all duration-500 ease-in-out transform scale-95 opacity-0 border-4 border-pink-200">
-        <h1 class="text-6xl font-extrabold text-pink-600 mb-6 animate-bounce-slow drop-shadow-md">
-            Happy 22nd Birthday, Rania! 🎉🎂
+    <!-- المحتوى -->
+    <div id="birthday-content" class="hidden bg-white p-10 rounded-3xl shadow-xl max-w-3xl w-full text-center border-4 border-pink-200">
+        <h1 class="text-5xl font-extrabold text-pink-600 mb-6">
+            Happy 20th Birthday, Batul! 🎉🎂
         </h1>
-        <p class="text-2xl text-purple-700 mb-8 font-semibold flex justify-center items-center">
-            To an absolutely wonderful friend on her special day!
-            <span class="teddy-bear-icon">🐻</span>
+        <p class="text-2xl text-purple-700 mb-8 font-semibold">
+            To an absolutely wonderful person on her special day! 🐻
         </p>
-
-        <div class="relative w-full max-w-md mx-auto mb-10 overflow-hidden rounded-2xl shadow-lg border-4 border-purple-300">
-            <!-- صورة الكيكة والدبدوب -->
-            <img src="https://placehold.co/500x350/FFD1DC/FF69B4?text=Happy+22nd+Rania!+%0ACute+Cake+%2B+Teddy+Bear" alt="صورة عيد ميلاد رانيا" class="w-full h-auto object-cover">
-            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <span class="text-white text-5xl">🎁🎈</span>
-            </div>
-        </div>
-
-        <p class="text-xl text-gray-800 mb-8 leading-relaxed text-center px-4">
-            Dearest <strong>Rania</strong>,
+        <p class="text-xl text-gray-800 mb-8 leading-relaxed">
+            Dearest <strong>Batul</strong>,
             <br><br>
-            Wishing you the happiest 22nd birthday filled with joy, laughter, and all the wonderful things you deserve! ✨ It's been incredible to see you grow and achieve so much. May this new year bring you even more success, happiness, and unforgettable moments.
+            Wishing you the happiest 20th birthday filled with joy, laughter, and all the wonderful things you deserve! ✨ 
             <br><br>
-            You're truly a special person, and I'm so grateful for your friendship. Enjoy your day to the fullest! 💖
-            <br><br>
-            With all my love and best wishes,
+            With all my love,
             <br>
-            <span class="text-pink-600 font-bold text-3xl">Kadi</span> <span class="teddy-bear-icon">🧸</span>
+            <span class="text-pink-600 font-bold text-3xl">Kadi</span> 🧸
         </p>
-
-        <div class="mt-10">
-            <p class="text-gray-500 text-base flex justify-center items-center">
-                (Psst... this surprise was made just for you! 😊
-                <span class="teddy-bear-icon">🐻‍❄️</span>
-                )
-            </p>
-        </div>
     </div>
 
     <script>
         function checkPassword() {
-            const correctPassword = "rania22"; 
+            const correctPassword = "batul21"; // كلمة السر الجديدة
             const enteredPassword = document.getElementById("password-input").value;
-            const passwordScreen = document.getElementById("password-screen");
-            const birthdayContent = document.getElementById("birthday-content");
-            const errorMessage = document.getElementById("error-message");
-
             if (enteredPassword === correctPassword) {
-                passwordScreen.classList.add("hidden");
-                setTimeout(() => {
-                    birthdayContent.classList.remove("hidden");
-                    birthdayContent.classList.remove("scale-95", "opacity-0");
-                    birthdayContent.classList.add("scale-100", "opacity-100");
-                }, 300);
+                document.getElementById("password-screen").classList.add("hidden");
+                document.getElementById("birthday-content").classList.remove("hidden");
             } else {
-                errorMessage.classList.remove("hidden");
-                document.getElementById("password-input").classList.add("animate-shake");
-                setTimeout(() => {
-                    document.getElementById("password-input").classList.remove("animate-shake");
-                }, 500);
+                document.getElementById("error-message").classList.remove("hidden");
             }
         }
     </script>
 </body>
 </html>
-
