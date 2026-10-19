@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 23rd Birthday, Ouidad! 🎉🐻</title>
+    <title>Happy 16th Birthday, Lina! 🎉🐻</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -46,71 +46,4 @@
             color: white;
             font-weight: bold;
             font-size: 1.1rem;
-            padding: 15px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-        .error-text { color: #ef4444; font-weight: 600; margin-top: 10px; display: none; }
-        .image-box { width: 100%; border-radius: 16px; overflow: hidden; border: 3px solid #d8b4fe; margin: 20px 0; }
-        .image-box img { width: 100%; height: auto; display: block; }
-        .hidden { display: none !important; }
-        .bear { font-size: 2rem; display: inline-block; }
-    </style>
-</head>
-<body>
-
-    <!-- شاشة كلمة المرور -->
-    <div id="password-screen" class="card">
-        <h2>Unlock Your Birthday Surprise! ✨</h2>
-        <p>Enter the secret password to reveal your special message for Ouidad.</p>
-        <input type="password" id="password-input" placeholder="Enter password">
-        <button type="button" onclick="checkPassword()">Unlock the Magic! 💖</button>
-        <p id="error-message" class="error-text">Oops! Incorrect password. Please try again!</p>
-    </div>
-
-    <!-- المحتوى الداخلي -->
-    <div id="birthday-content" class="card card-content hidden">
-        <h1>Happy 23rd Birthday, Ouidad! 🎉🎂</h1>
-        <p style="color: #7e22ce; font-weight: 600; font-size: 1.3rem;">
-            To an absolutely wonderful friend on her special day! <span class="bear">🐻</span>
-        </p>
-
-        <div class="image-box">
-            <img src="https://placehold.co/500x350/FFD1DC/FF69B4?text=Happy+23rd+Ouidad!+%0ACute+Cake+%2B+Teddy+Bear" alt="Happy Birthday Ouidad">
-        </div>
-
-        <p>
-            Dearest <strong>Ouidad</strong>,
-            <br><br>
-            Wishing you the happiest 23rd birthday filled with joy, laughter, and all the wonderful things you deserve! ✨ It's been incredible to see you grow and achieve so much. May this new year bring you even more success, happiness, and unforgettable moments.
-            <br><br>
-            You're truly a special person, and I'm so grateful for your friendship. Enjoy your day to the fullest! 💖
-            <br><br>
-            With all my love and best wishes,
-            <br>
-            <span style="color: #db2777; font-weight: bold; font-size: 1.8rem;">Kadi</span> <span class="bear">🧸</span>
-        </p>
-
-        <p style="color: #6b7280; font-size: 0.95rem;">
-            (Psst... this surprise was made just for you! Hope you liked it! 😊 <span class="bear">🐻‍❄️</span>)
-        </p>
-    </div>
-
-    <script>
-        function checkPassword() {
-            var inputVal = document.getElementById("password-input").value.trim();
-            var passScreen = document.getElementById("password-screen");
-            var mainContent = document.getElementById("birthday-content");
-            var errMessage = document.getElementById("error-message");
-
-            if (inputVal === "ouidad23") {
-                passScreen.classList.add("hidden");
-                mainContent.classList.remove("hidden");
-            } else {
-                errMessage.style.display = "block";
-            }
-        }
-    </script>
-</body>
-</html>
+            padding
