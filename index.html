@@ -1,49 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 16th Birthday, Lina! 🎉🐻</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Happy 16th Birthday, Lina! 🎉</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #fcf3f6;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 0;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .card {
-            background: #ffffff;
-            padding: 30px 20px;
-            border-radius: 24px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             max-width: 500px;
             width: 100%;
             text-align: center;
-            border: 4px solid #fbcfe8;
+            border: 3px solid #fbcfe8;
         }
-        .card-content { max-width: 700px; }
-        h2 { font-size: 1.8rem; color: #9333ea; margin-bottom: 15px; }
-        h1 { font-size: 2.2rem; color: #db2777; margin-bottom: 20px; }
-        p { color: #374151; font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
         input {
-            width: 100%;
-            padding: 15px;
+            width: 80%;
+            padding: 12px;
+            margin: 15px 0;
             border: 2px solid #d8b4fe;
-            border-radius: 12px;
-            font-size: 1.2rem;
+            border-radius: 8px;
+            font-size: 16px;
             text-align: center;
-            outline: none;
-            margin-bottom: 15px;
         }
         button {
-            width: 100%;
-            background: linear-gradient(to right, #ec4899, #a855f7);
+            background: #db2777;
             color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
             font-weight: bold;
-            font-size: 1.1rem;
-            padding
+        }
+        button:hover {
+            background: #be185d;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شاشة كلمة المرور -->
+    <div id="password-screen" class="box">
+        <h2 style="color: #9333ea;">Unlock Your Birthday Surprise! ✨</h2>
+        <p style="color: #4b5563;">Enter the secret password for Lina.</p>
+        <input type="password" id="pass-input" placeholder="Enter password"><br>
+        <button onclick="checkPass()">Unlock 💖</button>
+        <p id="error-msg" class="error">كلمة المرور غير صحيحة، حاول مجدداً!</p>
+    </div>
+
+    <!-- المحتوى الاحتفالي -->
+    <div id="content-screen" class="box hidden">
+        <h1 style="color: #db2777;">Happy 16th Birthday, Lina! 🎉🎂</h1>
+        <p style="color: #7e22ce; font-size: 18px; font-weight: bold;">To an absolutely wonderful friend on her special day! 🐻</p>
+        
+        <p style="color: #374151; line-height: 1.6; text-align: left; margin-top: 20px;">
+            Dearest <strong>Lina</strong>,
+            <br><br>
+            Wishing you the happiest 16th birthday filled with joy, laughter, and all the wonderful things you deserve! ✨ May this new year bring you immense success and unforgettable moments.
+            <br><br>
+            With all my love and best wishes,
+            <br>
+            <span style="color: #db2777; font-weight: bold; font-size: 20px;">Kadi</span> 🧸
+        </p>
+    </div>
+
+    <script>
+        function checkPass() {
+            var val = document.getElementById("pass-input").value.trim();
+            if (val === "lina16") {
+                document.getElementById("password-screen").style.display = "none";
+                document.getElementById("content-screen").classList.remove("hidden");
+            } else {
+                document.getElementById("error-msg").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
